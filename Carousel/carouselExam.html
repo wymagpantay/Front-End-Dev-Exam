@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carousel</title>
+    <style>
+      .carousel img {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Carousel</h1>
+    <div class="carousel">
+      <img alt="First" src="https://placehold.co/350x200?text=1" />
+      <img alt="Second" src="https://placehold.co/350x200?text=2" />
+      <img alt="Third" src="https://placehold.co/350x200?text=3" />
+      <img alt="Fourth" src="https://placehold.co/350x200?text=4" />
+      <img alt="Fifth" src="https://placehold.co/350x200?text=5" />
+    </div>
+    <script>
+      (() => {
+        // Select all images within the carousel
+        const images = document.querySelectorAll(".carousel img");
+
+        // Check if there are no images and will return an error if there is none found
+        if (images.length === 0) {
+          console.error("No images found");
+          return;
+        }
+
+        // Track the index of the currently displayed image
+        let currentIndex = 0;
+
+        // Function to show the next image in the carousel
+        const showNextImage = () => {
+          images[currentIndex].style.display = "none"; // Hide the current image
+          currentIndex = (currentIndex + 1) % images.length; // Move to the next image, looping back to the first if needed
+          images[currentIndex].style.display = "block"; // Display the next image
+        };
+
+        // Sets the interval for the carousel
+        const startCarousel = () => {
+          setInterval(showNextImage, 1000);
+        };
+
+        // Starts the carousel when the page loads
+        startCarousel();
+      })();
+    </script>
+  </body>
+</html>
+
+<!-- BONUS
+    
+    If I were to use third-party tools, I would use Bootstrap as it already has a ready-to-use component called the "Carousel" that is easy to implement and highly customizable. 
+
+-->

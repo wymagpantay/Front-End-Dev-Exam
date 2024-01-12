@@ -1,0 +1,76 @@
+html, body {
+    background: #000;
+    color: #fff;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+table {
+    border: 0;
+    margin: 0 auto;
+}
+
+th {
+    font-weight: bold;
+    background: #222;
+    padding: 5px 10px;
+}
+
+td {
+    padding: 10px 20px;
+    border: 1px solid #222;
+    vertical-align: middle;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #ff0000;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(112, 101, 101);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.no-button,
+.yes-cancel-button,
+.cancelled-text {
+    margin: 10px; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.no-button {
+    background: #eee;
+}
+
+.yes-cancel-button {
+    background: #ff0000;
+    color: #222;
+}
+
+.cancelled-text {
+    background: #eee;
+    color: #333;
+}
